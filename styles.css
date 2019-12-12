@@ -6,10 +6,10 @@
 
 /* Navbar links */
 #navbar a {
-  float: center;
+  float: right;
   display: block;
   color: #f2f2f2;
-  text-align: center;
+  text-align: right;
   padding: 14px;
   text-decoration: none;
 }
