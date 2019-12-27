@@ -74,7 +74,7 @@ li a:hover:not(.active) {
 
 #navbar a.active {
     border-bottom: 1px solid black;
-    width: 100%;
+    max-width:  width: 100%;
     padding-bottom: 5px;
     background-color: #FFFFFF;
     color: black;
@@ -130,7 +130,7 @@ li a:hover:not(.active) {
 /* If have the image layer */
 .rig-img {
     display:block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border:none;
     transform:scale(1.0);
@@ -192,7 +192,8 @@ li a:hover:not(.active) {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  padding: 50px;
+  padding: 100px 10px 0px 10px;
+
 
 }
 
@@ -204,14 +205,17 @@ li a:hover:not(.active) {
 }
 .portfolio{
     width: 100%;
-
 }
 
-.column.left{
-    width: 33.33%;
+.profilepic{
+    max-width: 100%;
+}
+
+.left{
     position: fixed;
+    width: 33.33%;
 }
-.column.right{
+.right{
     width: 66.66%;
     float: right;
 }
@@ -252,8 +256,8 @@ a:hover {
     width: 50%;
 }
 .about-right{
-    float: left;
     padding: 15px;
+    float: left;
     width: 50%;
 }
 
