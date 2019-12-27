@@ -243,17 +243,18 @@ a:hover {
   border-radius: 0%;
 }
 .about{
+    float: right;
     padding: 15px;
-    width: 70%;
+    width: 100%;
+    max-width: 100%;
 }
 .about-left{
-    float: left;
-    width: 40%;
+    width: 50%;
 }
 .about-right{
+    float: left;
     padding: 15px;
-    float: right;
-    width: 60%;
+    width: 50%;
 }
 
 @media (max-width: 9000px) {
