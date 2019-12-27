@@ -1,0 +1,304 @@
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 15px;
+    padding: 15px 15px;
+}
+
+@font-face {
+  font-family: myCustomFont;
+  src: url(../fonts/montserrat/Montserrat-ExtraLight.otf);
+}
+h2{
+    font-family: myCustomFont;
+    font-size: 25px;
+    padding: 15px;
+}
+.header {
+  background-color: #FFFFFF;
+  padding: 30px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  float: left;
+  background-color: #FFFFFF;
+  padding: 0px;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #FFFFFF;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+#navbar a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 20px 30px 20px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: myCustomFont;
+}
+
+#navbar a:hover {
+    background-color: #FFFFFF;
+    color: gray;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-bottom: 5px;
+    background-color: #FFFFFF;
+    color: black;
+}
+.container {
+    position: absolute;
+    z-index: -1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .container {
+  padding-top: 5px;
+}
+#title {
+    float: left;
+    font-weight: bold;
+    font-family: serif;
+    padding: 0px 50px 0px 50px;
+}
+.bigger { font-size:250%; }
+
+#rig {
+    margin:0 auto; /*center aligned*/
+    padding-top: 100px;
+    font-size: 0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    background-color:#FFFFFF;
+}
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width: 25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1.0);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #98E690 url(img/link.png) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:normal!important;
+    top:50%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 50px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.portfolio{
+    width: 100%;
+
+}
+
+.column.left{
+    width: 33.33%;
+    position: fixed;
+}
+.column.right{
+    width: 66.66%;
+    float: right;
+}
+.next-button{
+    padding: 15px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding:5px 15px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #000000;
+  color: white;
+}
+
+.next {
+  background-color: #000000;
+  color: white;
+}
+
+.round {
+  border-radius: 0%;
+}
+.about{
+    padding: 15px;
+    width: 70%;
+}
+.about-left{
+    float: left;
+    width: 40%;
+}
+.about-right{
+    padding: 15px;
+    float: right;
+    width: 60%;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 1500px) {
+    #rig li {
+        width:50%;
+    }
+    .about{
+    width: 100%;
+    }
+    .about-left{
+        width: 50%;
+    }
+    .about-right{
+        width: 50%;
+    }
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    #rig li {
+        width: 100%;
+    }
+    .left{
+        position: relative;
+        width: 100%;    
+    }
+    .right{
+        width: 100%;
+    }
+    .portfolio{
+        width: 100%;
+    }
+    .about{
+        position: relative;
+        width: 100%;
+    }
+    .about-left{
+        width: 100%;
+    }
+    .about-right{
+        width: 100%;
+    }
+}
